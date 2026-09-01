@@ -28,5 +28,7 @@
     <footer>
         <p>&copy; {{ date('Y') }} Nusantara Heritage. Melestarikan Budaya Bangsa.</p>
     </footer>
+
+    <script src="{{ asset('js/script.js') }}"></script>
 </body>
 </html>

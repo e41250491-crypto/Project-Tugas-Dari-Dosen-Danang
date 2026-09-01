@@ -270,5 +270,84 @@ footer {
     }
     .hero h1 {
         font-size: 3rem;
-    }
+}
+
+/* =========================================
+   UI/UX Enhancements & JS Animations 
+   ========================================= */
+
+/* Element hidden before scroll */
+.fade-up-element {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Element visible after scroll */
+.fade-up-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Audio Play Button */
+.play-audio-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background: rgba(212, 175, 55, 0.1);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.play-audio-btn:hover {
+    background: var(--accent);
+    color: var(--bg-color);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.4);
+}
+
+.play-audio-btn.playing {
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    border-color: #fff;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+
+/* Wayang Pop-up Hover Effect */
+.wayang-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.wayang-figure {
+    position: absolute;
+    bottom: -150px;
+    right: -20px;
+    height: 150%;
+    opacity: 0;
+    filter: drop-shadow(0 10px 10px rgba(0,0,0,0.8));
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 5;
+    pointer-events: none;
+}
+
+.wayang-card:hover .wayang-figure {
+    bottom: -20px;
+    opacity: 1;
+}
+
+.wayang-card:hover .card-img {
+    filter: brightness(0.3) blur(2px);
 }
