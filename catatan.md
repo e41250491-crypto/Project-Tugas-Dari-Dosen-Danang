@@ -53,8 +53,13 @@ Catat setiap perubahan atau penambahan fitur di bawah ini dengan menyertakan tan
     - `/tentang-kami` (Tentang)
 - **Dokumentasi:** Membuat dan memperbarui file `catatan.md` untuk melacak alur proyek dan perubahan UI secara akurat.
 
-### **[Draft untuk update selanjutnya...]**
-- ...
+### **[2 September 2026]**
+- **Sistem & Konfigurasi:** Mengaktifkan kembali database menggunakan SQLite (default Laravel).
+- **Fitur Autentikasi:**
+  - Mengembalikan alur Login & Register menjadi **halaman terpisah** (bukan modal) sesuai permintaan pengguna.
+  - Membuat ulang halaman UI untuk `/login` dan `/register` menggunakan gaya *glassmorphism*.
+  - Mengembalikan Navbar untuk memuat tautan `Login` dan `Register` yang mengarah ke halaman masing-masing.
+- **Routing:** Mendaftarkan routing baru untuk autentikasi di `routes/web.php`.
 
 ---
 
